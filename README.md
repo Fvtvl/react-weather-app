@@ -1,1 +1,1 @@
-# react-weather-app
+# weather-react-app
