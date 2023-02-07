@@ -1,5 +1,6 @@
-import Descriptions from './Components/Descriptions';
 import { useCallback, useRef } from 'react';
+import Descriptions from './Components/Descriptions';
+
 import useFetch from './hooks/useFetch';
 
 function App() {
@@ -56,9 +57,11 @@ function App() {
                 <h3>{weather.description}</h3>
               </div>
               <div className="temperature">
-                <h1>{`${weather.temp.toFixed()} ${
-                  units === 'metric' ? '°C' : '°F'
-                }`}</h1>
+                <h1>
+                  {`${weather.temp.toFixed()} ${
+                    units === 'metric' ? '°C' : '°F'
+                  }`}
+                </h1>
               </div>
             </div>
             <Descriptions weather={weather} units={units} />
